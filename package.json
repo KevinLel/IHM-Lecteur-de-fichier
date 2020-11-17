@@ -1,22 +1,22 @@
 {
-  "name": "electron-quick-start",
+  "name": "ihm-lecteur-de-fichier",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
-  "main": "main.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinLel/IHM-Lecteur-de-fichier.git"
+  },
+  "author": "Cagnache",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevinLel/IHM-Lecteur-de-fichier/issues"
+  },
+  "homepage": "https://github.com/KevinLel/IHM-Lecteur-de-fichier#readme",
   "devDependencies": {
-    "electron": "^10.1.5"
+    "electron": "^11.0.0"
   }
 }
