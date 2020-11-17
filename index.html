@@ -7,8 +7,11 @@
     </head>
     <body>
         <h1>Bonjour le monde !</h1>
-        Nous utilisons Node <script>document. rite(process.versions.node)</script>,
+        Nous utilisons Node <script>document.write(process.versions.node)</script>,
         Chrome <script>document.write(process.versions. hrome)</script>,
         et Electron <script>document.write(process.versions.electron)</script>.
     </body>
+    <script>
+        console.log(require('./renderer.js'))
+    </script>
 </html>

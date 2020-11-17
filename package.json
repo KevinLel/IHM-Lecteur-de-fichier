@@ -2,8 +2,9 @@
   "name": "ihm-lecteur-de-fichier",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +19,6 @@
   "homepage": "https://github.com/KevinLel/IHM-Lecteur-de-fichier#readme",
   "devDependencies": {
     "electron": "^11.0.0"
-  }
+  },
+  "dependencies": {}
 }
