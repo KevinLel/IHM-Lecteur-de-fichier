@@ -1,0 +1,112 @@
+html{
+    background-color: #121212;
+}
+header, footer{
+    background-color: #1e1e1e;
+}
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: 100px;
+}
+/*Gestion de l'ouverture fermeture de l'header*/
+.headerClosed{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: 1%;
+}
+.headerOpened{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: 1%;
+}
+/* Fin de la gestion */
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+}
+main{
+    background-color: #121212;
+
+}
+.mainHeaderOpen{
+    margin-top: 200px;
+}
+.mainHeaderClosed{
+    margin-top: 10px;
+}
+button{
+    height: 100%;
+    width: auto;
+}
+.headerbutton{
+    background-color: #bb86fc;
+    padding: 2%;
+    border-radius: 10%;
+    border-color: #bb86fc;
+    border-style: solid;
+    padding: 2%;
+}
+.closebutton{
+    background-color: #cf6679;
+    padding: 2%;
+    border-radius: 10%;
+    border-color: #cf6679;
+    border-style: solid;
+    padding: 2%;
+}
+.btnImage{
+    width: 50%;
+    height: 50%;
+}
+p{
+    color: #e5e5e5;
+    text-align: justify;
+}
+input{
+    background-color: #121212;
+    border-style: solid;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    border-left-color: #bb86fc;
+    border-left-width: 10px;
+}
+.headerClose{
+    background-color: #1e1e1e;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #1e1e1e;
+    position: relative;
+    padding: 1%;
+    margin-top: 0%;
+}
+.logoBleach{
+    height: 20px;
+    width: auto;
+}
+.content{
+    margin-top: 15px;
+    height: 10px;
+}
+.right-panel{
+    margin-left: 710px;
+}
+input{
+    color: #bb86fc;
+}
+.highlight{
+    background-color: #bb86fc;
+}
