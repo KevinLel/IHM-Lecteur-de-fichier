@@ -10,7 +10,11 @@ header{
     top: 0;
     width: 100%;
     z-index: 1;
+<<<<<<< HEAD
     height: 60px;
+=======
+    height: 100px;
+>>>>>>> origin
 }
 /*Gestion de l'ouverture fermeture de l'header*/
 .headerClosed{
@@ -39,7 +43,11 @@ footer{
 }
 main{
     background-color: #121212;
+<<<<<<< HEAD
     margin-bottom: 100px;
+=======
+
+>>>>>>> origin
 }
 .mainHeaderOpen{
     margin-top: 200px;
@@ -47,6 +55,13 @@ main{
 .mainHeaderClosed{
     margin-top: 10px;
 }
+<<<<<<< HEAD
+=======
+button{
+    height: 100%;
+    width: auto;
+}
+>>>>>>> origin
 .headerbutton{
     background-color: #bb86fc;
     padding: 2%;
@@ -54,6 +69,10 @@ main{
     border-color: #bb86fc;
     border-style: solid;
     padding: 2%;
+<<<<<<< HEAD
+=======
+    margin-top: 15px;
+>>>>>>> origin
 }
 .closebutton{
     background-color: #cf6679;
@@ -63,6 +82,13 @@ main{
     border-style: solid;
     padding: 2%;
 }
+<<<<<<< HEAD
+=======
+.btnImage{
+    width: 50%;
+    height: 50%;
+}
+>>>>>>> origin
 p{
     color: #e5e5e5;
     text-align: justify;
@@ -82,6 +108,7 @@ input{
     border-style: solid;
     border-color: #1e1e1e;
     position: relative;
+<<<<<<< HEAD
     padding: 1%;
     margin-top: 0%;
 }
@@ -124,4 +151,12 @@ input{
 }
 .buttonEdit:hover{
     color: #bb86fc;
+=======
+
+    margin-top: 10%;
+}
+.logoBleach{
+    height: 10%;
+    width: auto;
+>>>>>>> origin
 }

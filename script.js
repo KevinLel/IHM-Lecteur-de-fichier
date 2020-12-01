@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $( document ).ready(function() {
     $('.dropdown-submenu a.test').on("click", function(e){
         $(this).next('ul').toggle();
@@ -20,3 +21,15 @@ document.getElementById("SearchedElement").addEventListener('input', function(ev
     text.replace("is", '<span class="highlight">is</span>');
 });
 
+=======
+document.getElementById("OpeningClosingButton").addEventListener("click", openClosedHeader);
+
+function OpenCloseHeader(){
+    headerClass = document.getElementById('header').className
+    mainClass = document.getElementById("main").className
+
+    if(headerClass == "headerClosed"){
+        document.getElementById('header').className = "header" 
+    }
+}
+>>>>>>> origin
