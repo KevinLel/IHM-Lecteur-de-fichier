@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require('electron')
+const Mousetrap = require('mousetrap');
 
 function createWindow () {
   const win = new BrowserWindow({
@@ -9,8 +10,7 @@ function createWindow () {
       enableRemoteModule: true,
     }
   })
-
-  win.loadFile('index.html')
+  win.loadFile('index.html')  
   win.removeMenu()
   win.webContents.openDevTools()
 }
@@ -28,6 +28,15 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+
+Mousetrap.bind(['command+o', 'ctrl+o'], function() {
+        console.log('command o or control o');
+
+        // return false to prevent default browser behavior
+        // and stop event from bubbling
+        return false;
+    });
 
 function OpenCloseHeader(){
     headerClass = document.getElementById('header').className
@@ -87,14 +96,18 @@ function countMotParagraphe(){
 	document.getElementById("nbMot").innerHTML = " " + nombreParagraphe + " paragraphe, " + nombreMot + " mots";
 }
 function search_text(){
-    var text = remove_span(document.getElementById("textContainer").innerHTML);
 	var element_researched = document.getElementById("SearchedElement").value
-	if (element_researched != '') {
-		var exist = text.split(element_researched).length - 1;
+	highlight_text(element_researched)
+}
+function highlight_text(element){
+	var text = remove_span(document.getElementById("textContainer").innerHTML);
+	if (element != '') {
+		var exist = text.split(element).length - 1;
 		//document.getElementById("numberWord").innerHTML = exist + " mots trouvé";
-		document.getElementById('textContainer').innerHTML=text.replaceAll(element_researched, '<span class="highlight">'+element_researched+'</span>');
+		document.getElementById('textContainer').innerHTML=text.replaceAll(element, '<span class="highlight">'+element+'</span>');
 	}
 }
+
 function remove_span(text){
 	var result = text.replaceAll('<span class="highlight">','')
 	return result.replaceAll('</span>','');
