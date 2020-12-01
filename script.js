@@ -1,8 +1,14 @@
 $( document ).ready(function() {
+    $('.dropdown-submenu a.test').on("click", function(e){
+        $(this).next('ul').toggle();
+        e.stopPropagation();
+        e.preventDefault();
+      });
+
     var Mytext = document.getElementById("textContainer").innerHTML;
-var nombreMot = Mytext.split(' ').length;
-var nombreParagraphe = Mytext.split('\n').length;
-document.getElementById("nbMot").innerHTML = nombreParagraphe + "paragraphe" + nombreMot + "mots";
+    var nombreMot = Mytext.split(' ').length;
+    var nombreParagraphe = Mytext.split('\n').length;
+    document.getElementById("nbMot").innerHTML = nombreParagraphe + "paragraphe" + nombreMot + "mots";
 });
 
 //Highlight du text
@@ -14,14 +20,3 @@ document.getElementById("SearchedElement").addEventListener('input', function(ev
     text.replace("is", '<span class="highlight">is</span>');
 });
 
-function OpenCloseHeader(){
-    headerClass = document.getElementById('header').className
-    mainClass = document.getElementById("main").className
-
-    if(headerClass == "headerClosed"){
-        document.getElementById('header').className = "headerOpened";
-    }
-    else{
-        document.getElementById('header').className = "headerClosed"; 
-    }
-}

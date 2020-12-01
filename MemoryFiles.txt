@@ -1,0 +1,2 @@
+monfichier.txt : ckhaebrjghazbrg
+text.txt : fichier

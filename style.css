@@ -10,7 +10,7 @@ header{
     top: 0;
     width: 100%;
     z-index: 1;
-    height: 100px;
+    height: 60px;
 }
 /*Gestion de l'ouverture fermeture de l'header*/
 .headerClosed{
@@ -39,17 +39,13 @@ footer{
 }
 main{
     background-color: #121212;
-
+    margin-bottom: 100px;
 }
 .mainHeaderOpen{
     margin-top: 200px;
 }
 .mainHeaderClosed{
     margin-top: 10px;
-}
-button{
-    height: 100%;
-    width: auto;
 }
 .headerbutton{
     background-color: #bb86fc;
@@ -66,10 +62,6 @@ button{
     border-color: #cf6679;
     border-style: solid;
     padding: 2%;
-}
-.btnImage{
-    width: 50%;
-    height: 50%;
 }
 p{
     color: #e5e5e5;
@@ -93,13 +85,10 @@ input{
     padding: 1%;
     margin-top: 0%;
 }
-.logoBleach{
-    height: 20px;
-    width: auto;
-}
 .content{
-    margin-top: 15px;
-    height: 10px;
+    margin: 0;
+    top: 50%;
+    vertical-align: middle;
 }
 .right-panel{
     margin-left: 710px;
@@ -109,4 +98,30 @@ input{
 }
 .highlight{
     background-color: #bb86fc;
+}
+.button-toggle{
+    color: #e5e5e5;
+    text-decoration: dotted;
+}
+.caret{
+    color: #e5e5e5;
+}
+.dropdown-submenu {
+    position: relative;
+  }
+  
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    background-color: ;
+}
+
+.buttonEdit{
+    color: #e5e5e5;
+    margin-bottom: 0;
+    transition: color 0.25s;
+}
+.buttonEdit:hover{
+    color: #bb86fc;
 }
