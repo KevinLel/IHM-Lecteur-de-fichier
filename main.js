@@ -1,4 +1,8 @@
 const { app, BrowserWindow } = require('electron')
+
+var fileTypes = ['txt'];  //acceptable file types
+
+
 function createWindow () {
   const win = new BrowserWindow({
     width: 800,
@@ -47,6 +51,8 @@ function clickElem(elem) {
 	eventMouse.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null)
 	elem.dispatchEvent(eventMouse)
 }
+
+
 function openFile(func) {
 	readFile = function(e) {
 		var file = e.target.files[0];
@@ -59,7 +65,12 @@ function openFile(func) {
 			fileInput.func(contents)
 			document.body.removeChild(fileInput)
 		}
-		reader.readAsText(file)
+        if (file.type == "text/plain"){
+			reader.readAsText(file);
+		}else{
+			dispFile('Mauvais type de fichier. Merci d\'utilisez un .txt')
+		}
+		
 	}
 	fileInput = document.createElement("input")
 	fileInput.type='file'
