@@ -10,7 +10,7 @@ header{
     top: 0;
     width: 100%;
     z-index: 1;
-    height: 7em;
+    height: 100px;
 }
 /*Gestion de l'ouverture fermeture de l'header*/
 .headerClosed{
@@ -48,7 +48,7 @@ main{
     margin-top: 10px;
 }
 button{
-    height: auto;
+    height: 100%;
     width: auto;
 }
 .headerbutton{

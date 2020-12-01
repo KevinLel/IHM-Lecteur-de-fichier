@@ -1,8 +1,5 @@
 const { app, BrowserWindow } = require('electron')
 
-var fileTypes = ['txt'];  //acceptable file types
-
-
 function createWindow () {
   const win = new BrowserWindow({
     width: 800,
@@ -14,6 +11,7 @@ function createWindow () {
   })
 
   win.loadFile('index.html')
+  win.removeMenu()
   win.webContents.openDevTools()
 }
 
@@ -44,8 +42,10 @@ function OpenCloseHeader(){
 }
 
 function dispFile(contents) {
-  document.getElementById('textContainer').innerHTML=contents
+  document.getElementById('textContainer').innerHTML=contents.replace(/\r|\n/g, '\n')
+  countMotParagraphe()
 }
+
 function clickElem(elem) {
 	var eventMouse = document.createEvent("MouseEvents")
 	eventMouse.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null)
@@ -68,7 +68,7 @@ function openFile(func) {
         if (file.type == "text/plain"){
 			reader.readAsText(file);
 		}else{
-			dispFile('Mauvais type de fichier. Merci d\'utilisez un .txt')
+			dispFile('Mauvais type de fichier. Merci d\'utilisez un fichier txt.')
 		}
 		
 	}
@@ -79,4 +79,24 @@ function openFile(func) {
 	fileInput.func=func
 	document.body.appendChild(fileInput)
 	clickElem(fileInput)
+}
+function countMotParagraphe(){
+	var Mytext = document.getElementById("textContainer").innerHTML;
+	var nombreMot = Mytext.split(' ').length;
+	var nombreParagraphe = Mytext.split('\n').length;
+	document.getElementById("nbMot").innerHTML = " " + nombreParagraphe + " paragraphe, " + nombreMot + " mots";
+}
+function search_text(){
+    var text = remove_span(document.getElementById("textContainer").innerHTML);
+	var element_researched = document.getElementById("SearchedElement").value
+	if (element_researched != '') {
+		var exist = text.split(element_researched).length - 1;
+		//document.getElementById("numberWord").innerHTML = exist + " mots trouvé";
+		document.getElementById('textContainer').innerHTML=text.replaceAll(element_researched, '<span class="highlight">'+element_researched+'</span>');
+	}
+}
+function remove_span(text){
+	var result = text.replaceAll('<span class="highlight">','')
+	return result.replaceAll('</span>','');
+
 }
