@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/KevinLel/IHM-Lecteur-de-fichier#readme",
   "devDependencies": {
-    "electron": "^11.0.0"
+    "electron": "^22.2.0"
   },
   "dependencies": {
     "mousetrap": "^1.6.5",
